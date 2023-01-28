@@ -1,3 +1,7 @@
+# References
+
+https://developer.hashicorp.com/terraform/language/expressions/for
+
 # Show information about a local variable:
     local.websites
 
@@ -20,3 +24,5 @@
 
 # Combining filtering with sets:
     [ for ws_key, ws_val in local.websites : ws_val.url if ws_val.public-facing == false ]
+
+# Creating resources based off of filters
