@@ -1,6 +1,6 @@
 # References
 
-https://developer.hashicorp.com/terraform/language/expressions/for
+<https://developer.hashicorp.com/terraform/language/expressions/for>
 
 # Show information about a local variable:
     local.websites
