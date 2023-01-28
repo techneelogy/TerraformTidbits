@@ -1,28 +1,34 @@
 locals {
     websites = {
         "MarketingSite" = {
-            public-facing = true
-            url = "example.com"
+            public-facing       = true
+            needs-load-balancer = true
+            url                 = "example.com"
         },
         "InternalHRPortal" = {
-            public-facing = false
-            url = "hr.example.com"
+            public-facing       = false
+            needs-load-balancer = true
+            url                 = "hr.example.com"
         },
         "InternalSecurityTeamSite" = {
-            public-facing = false
-            url = "example.com/securityteam"
+            public-facing       = false
+            needs-load-balancer = false
+            url                 = "example.com/securityteam"
         },
         "PublicAPIDeveloperPortal" = {
-            public-facing = true
-            url = "api.example.com"
+            public-facing       = true
+            needs-load-balancer = true
+            url                 = "api.example.com"
         },
         "InternalDocumentationSite" = {
-            public-facing = false
-            url = "docs.example.com"
+            public-facing       = false
+            needs-load-balancer = false
+            url                 = "docs.example.com"
         },
         "InternalITSMTool" = {
-            public-facing = false
-            url = "example.com/itsm"
+            public-facing       = false
+            needs-load-balancer = true
+            url                 = "example.com/itsm"
         }
     }
 }

@@ -14,6 +14,9 @@
 
 # Filter a local variable - again:
     { for ws_key, ws_val in local.websites : ws_key => ws_val if ws_val.public-facing == false }
+    { for ws_key, ws_val in local.websites : ws_key => ws_val if ws_val.public-facing == false && ws_val.needs-load-balancer == true }
+
+# Store these outputs in locals for ease of debugging
 
 # Construct a new, limited map based on a previous map:
     { for ws_key, ws_val in local.websites : ws_key => { url = ws_val.url } }
